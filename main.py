@@ -28,3 +28,6 @@ def BinToDec():
         classlist.append(("guess"+str(i)))
     ##----------------------------------------------------##
     return render_template('binarytodecimal.html', blist=BinaryList, alist=binaryCorrectAnswers, clist=classlist)
+
+if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=5000)
