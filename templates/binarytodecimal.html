@@ -11,10 +11,10 @@
     </head>
     <body>
           <h1>Binary To Decimal</h1>
-          <h2>You only get one Try</h2>
+          <h2>InDev</h2>
         
         
-        <table class="table">
+        <table class="tbl">
             <thead>
               <tr>
                 <th scope="col">#</th>
@@ -23,24 +23,22 @@
                 <th scope="col">Check</th>
               </tr>
             </thead>
+
             <tbody>
                 {% for i in blist %}
                 <tr class="row{{blist.index(i)+ 1}}">
-                  <th scope="row">{{blist.index(i) +1 }}</th>
+                  <th scope="row">{{blist.index(i)+1}}</th>
                   <td>{{i}}</td>
                   <td><input type="text" id="{{clist[blist.index(i)]}}"></td>
-                  <td><a href="#" class="btn btn-primary" onclick="checkAnswer(this, {{blist.index(i)}}, document.getElementById('{{clist[blist.index(i)]}}').value)" >Check Answer</a></td>
+                  <td><a href="#" type="submit" onclick="checkAnswer(this, {{blist.index(i)}}, document.getElementById('{{clist[blist.index(i)]}}').value)" >Check Answer</a></td>
                 </tr>
                 {% endfor %}
             </tbody>
           </table>
+          <a href="#" type="submit" onclick="window.location.reload()"> Restart </a>
+         
           <script type="text/javascript"> 
-            var test1 = {{ blist }};
-            var test2 = {{clist}};
             var test3 = {{ alist }} ;
-            var test4 = {{clist}};
-            var test1j = {{ blist|tojson }};
-            var test2j = {{clist|tojson}};
         </script>
           <script src="/static/jscripts/binarytodecimal.js"></script>
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
