@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1>IP Class Guess</h1>
+        <table class="tbl">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">IP</th>
+                <th scope="col">Guess</th>
+                <th scope="col">Check</th>
+              </tr>
+            </thead>
+
+            <tbody>
+                {% for i in iplist %}
+                <tr class="">
+                  <th scope="row">{{iplist.index(i)+1}}</th>
+                  <td>{{i}}</td>
+                  <td><input type="text" id=""></td>
+                  <td><a href="#" type="submit" onclick="">Check Answer</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+        <script src="" async defer></script>
+    </body>
+</html>

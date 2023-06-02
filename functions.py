@@ -28,3 +28,19 @@ def binaryToDecimal(binary_num):
         start -= 1
     return translated_binary
 ####################################################
+def generate_random_ip_address( ipclasslist):
+    ips = []
+    for i in ipclasslist: 
+        if i == 'A':
+            first_octet = random.randint(1, 126)
+        elif i == 'B':
+            first_octet = random.randint(128, 191)
+        elif i == 'C':
+            first_octet = random.randint(192, 223)
+        elif i == 'D':
+            first_octet = random.randint(224, 239)
+        elif i == 'E':
+            first_octet = random.randint(240, 255)
+        ips.append(f"{first_octet}.{random.randint(0, 255)}.{random.randint(0, 255)}.{random.randint(0, 255)}")
+    return ips
+  

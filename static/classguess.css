@@ -1,7 +1,7 @@
 h1{
     text-align: center;
 }
-h2{
+h2, h4{
     text-align: center;
 }
 body{
@@ -45,6 +45,7 @@ input {
 table{
     margin-top: 4vh;
 }
+
 .buttons{
     margin-top: 10%;
     display:flex;
