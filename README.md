@@ -1,4 +1,4 @@
-# flaskBlogWelcome to the Flask Blog App! This application encompasses everything I have been learning in terms of DevOps and applies it to create an amazing app. The app is not only developed using Flask, but it is also Dockerized and deployed. Additionally, I have set up a Continuous Integration pipeline to ensure smooth and efficient development.
+#Welcome to the Flask bin/hex App! This application encompasses everything I have been learning in terms of DevOps and applies it to create an amazing app. The app is not only developed using Flask, but it is also Dockerized and deployed. Additionally, I have set up a Continuous Integration pipeline to ensure smooth and efficient development.
 Features
 ##Flask-based: The app is built using Flask, a powerful and flexible web framework for Python.
 ##Dockerized: The app is containerized using Docker, enabling easy deployment and scalability.
@@ -11,7 +11,7 @@ Features
 ##Docker: A platform for building, shipping, and running applications in containers.
 ##Continuous Integration: A process of automating the build, test, and deployment of software changes.
 #Deployment
-##The Flask Blog App is deployed using a cloud platform or hosting service to make it accessible to users. The deployment process ensures that the app is securely and reliably available for use.
+##The Flask app will be deployed using a cloud platform or hosting service to make it accessible to users. The deployment process ensures that the app is securely and reliably available for use.
 
 #Continuous Integration Pipeline
 ##To ensure a smooth development process, a continuous integration pipeline is set up. This pipeline automates various tasks, such as code compilation, testing, and deployment. It helps catch issues early on and maintains a high level of code quality.
