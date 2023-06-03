@@ -19,17 +19,15 @@ table{
 .headerCont{
     display: flex;
 }
-a:link, a:visited {
+a, a:visited {
   border: 2px solid #7fffd4;
   color: #7fffd4;
   padding: 10px 20px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
 }
 
 a:hover, a:active {
-  background-color: c;
   color: #212529;
 }
 input { 
@@ -47,12 +45,12 @@ table{
 }
 
 .buttons{
-    margin-top: 5%;
+    margin-top: 10%;
     display:flex;
     justify-content: space-evenly;
 }
 .instructions{
-    width: 60%;
+    width: 90%;
     margin: auto;
     margin-top: 20vh;
 }
@@ -62,3 +60,48 @@ table{
 .step{
     margin-top: 5vh;
 }
+@media screen and (max-width: 580px) {
+    input{
+        width: 98%;
+        margin-left: 5px;
+    }
+    .check{
+        font-size: 1vh;
+    }
+    a:link, a:visited {
+        border: 2px solid #7fffd4;
+        color: #7fffd4;
+        padding: 3px 8px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
+    a:hover, a:active {
+    color: #212529;
+    }
+    body{
+    width: 95%;
+    }
+    table {
+    border-collapse: separate;
+    }
+    tr{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    justify-content: center;
+    }
+    td{
+    margin-top: 15px;
+    }
+    .button{
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .buttons a {
+        width: auto;
+        padding: 10px 15px;
+        margin-top: 10%;
+    }
+
+  }

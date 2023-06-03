@@ -30,7 +30,7 @@
                   <th scope="row">{{blist.index(i)+1}}</th>
                   <td>{{i}}</td>
                   <td><input type="text" id="{{clist[blist.index(i)]}}"></td>
-                  <td><a href="#" type="submit" onclick="checkAnswer(this, {{blist.index(i)}}, document.getElementById('{{clist[blist.index(i)]}}').value)" >Check Answer</a></td>
+                  <td><a href="#" type="submit" onclick="checkAnswer(this, {{blist.index(i)}}, document.getElementById('{{clist[blist.index(i)]}}').value)" class="check" >Check Answer</a></td>
                 </tr>
                 {% endfor %}
             </tbody>

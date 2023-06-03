@@ -18,7 +18,6 @@
         <table class="tbl">
             <thead>
               <tr>
-                <th scope="col">#</th>
                 <th scope="col">IP</th>
                 <th scope="col">Subnet</th>
                 <th scope="col">NetworkID</th>
@@ -32,15 +31,15 @@
                 <tr class="row{{listOfDictionaries.index(i)+ 1}}">
                   <th scope="row">{{listOfDictionaries.index(i)+1}}</th>
                   <td>{{i['cider']}}</td>
-                  <td><input type="text" id="subnetGuess{{listOfDictionaries.index(i)+1}}" ></td>
+                  <td><input type="text" id="subnetGuess{{listOfDictionaries.index(i)+1}}" placeholder="Subnet" ></td>
 
-                  <td><input type="text" id="networkGuess{{listOfDictionaries.index(i)+1}}"></td>
+                  <td><input type="text" id="networkGuess{{listOfDictionaries.index(i)+1}}" placeholder="NetworkID"></td>
 
-                  <td><input type="text" id="broadcastGuess{{listOfDictionaries.index(i)+1}}" ></td>
+                  <td><input type="text" id="broadcastGuess{{listOfDictionaries.index(i)+1}}" placeholder="broadcast Address" ></td>
 
-                  <td><input type="text" id="hostGuess{{listOfDictionaries.index(i)+1}}" ></td>
+                  <td><input type="text" id="hostGuess{{listOfDictionaries.index(i)+1}}" placeholder="TotalHosts"></td>
                   <!-- add the logic on the onclick relative to the scope -->
-                  <td><a href="#" type="submit" onclick="checkAnswer(this, {{listOfDictionaries.index(i)}}, document.getElementById('subnetGuess{{listOfDictionaries.index(i)+1}}').value, document.getElementById('networkGuess{{listOfDictionaries.index(i)+1}}').value, document.getElementById('broadcastGuess{{listOfDictionaries.index(i)+1}}').value, document.getElementById('hostGuess{{listOfDictionaries.index(i)+1}}').value )" >Check Answer</a></td>
+                  <td class="button"><a  type="submit" onclick="checkAnswer(this, {{listOfDictionaries.index(i)}}, document.getElementById('subnetGuess{{listOfDictionaries.index(i)+1}}').value, document.getElementById('networkGuess{{listOfDictionaries.index(i)+1}}').value, document.getElementById('broadcastGuess{{listOfDictionaries.index(i)+1}}').value, document.getElementById('hostGuess{{listOfDictionaries.index(i)+1}}').value )" >Check Answer</a></td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -58,7 +57,6 @@
             <table class="main_table">
               <thead>
                   <tr>
-                    <th scope="col">#</th>
                     <th scope="col">IP</th>
                     <th scope="col">Subnet</th>
                     <th scope="col">NetworkID</th>
@@ -68,7 +66,6 @@
                 </thead>
   
                 <tr>
-                  <th scope="row">#</th>
                   <td>191.46.60.186/29</td>
                   <td><input type="text" placeholder="255.255.255.248"></td>
       
@@ -78,7 +75,6 @@
       
                   <td><input type="text" placeholder="6"> </td>
                   <!-- add the logic on the onclick relative to the scope -->
-                  <td><a href="#" type="submit">Check Answer</a></td>
                 </tr>
   
             </table>
