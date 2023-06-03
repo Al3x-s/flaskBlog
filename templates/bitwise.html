@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="/static/bitwise.css">
+    </head>
+    <body class="body">
+        <h1> BitWise And Practice </h1>
+        <table class="tbl">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">IP</th>
+                <th scope="col">Subnet</th>
+                <th scope="col">NetworkID</th>
+                <th scope="col">Broadcast Address</th>
+                <th scope="col">TotalHosts</th>
+              </tr>
+            </thead>
+
+            <tbody>
+                {% for i in listOfDictionaries %}
+                <tr class="row{{listOfDictionaries.index(i)+ 1}}">
+                  <th scope="row">{{listOfDictionaries.index(i)+1}}</th>
+                  <td>{{i['cider']}}</td>
+                  <td><input type="text" id="subnetGuess{{listOfDictionaries.index(i)+1}}" ></td>
+
+                  <td><input type="text" id="networkGuess{{listOfDictionaries.index(i)+1}}"></td>
+
+                  <td><input type="text" id="broadcastGuess{{listOfDictionaries.index(i)+1}}" ></td>
+
+                  <td><input type="text" id="hostGuess{{listOfDictionaries.index(i)+1}}" ></td>
+                  <!-- add the logic on the onclick relative to the scope -->
+                  <td><a href="#" type="submit" onclick="checkAnswer(this, {{listOfDictionaries.index(i)}}, document.getElementById('subnetGuess{{listOfDictionaries.index(i)+1}}').value, document.getElementById('networkGuess{{listOfDictionaries.index(i)+1}}').value, document.getElementById('broadcastGuess{{listOfDictionaries.index(i)+1}}').value, document.getElementById('hostGuess{{listOfDictionaries.index(i)+1}}').value )" >Check Answer</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+          <div class="buttons">
+          
+            <a href="#" type="submit" onclick="window.location.reload()"> Restart </a>
+            <a href="/" type="submit" > Go Back </a>
+          
+          </div>
+            
+            <h1 class='mid'>Answer Example</h1>
+            <h4>This is the correct format to imput information</h4>
+  
+            <table class="main_table">
+              <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">IP</th>
+                    <th scope="col">Subnet</th>
+                    <th scope="col">NetworkID</th>
+                    <th scope="col">Broadcast Address</th>
+                    <th scope="col">TotalHosts</th>
+                  </tr>
+                </thead>
+  
+                <tr>
+                  <th scope="row">#</th>
+                  <td>191.46.60.186/29</td>
+                  <td><input type="text" placeholder="255.255.255.248"></td>
+      
+                  <td><input type="text" placeholder="191.46.60.184"></td>
+      
+                  <td><input type="text" placeholder="191.46.60.191"></td>
+      
+                  <td><input type="text" placeholder="6"> </td>
+                  <!-- add the logic on the onclick relative to the scope -->
+                  <td><a href="#" type="submit">Check Answer</a></td>
+                </tr>
+  
+            </table>
+        <div class="instructions">
+            <h2>Step-by-Step Calculation of Network Information</h2>
+
+            <h3 class="step">Step 1: Determine the Subnet Mask:</h3>
+            <p>
+                The CIDR notation /29 indicates that the first 29 bits of the subnet mask are set to 1. The remaining 3 bits are set to 0. Thus, the subnet mask is 255.255.255.248.            </p>
+            <h3 class="step">Step 2: Calculate the Network IP:</h3>
+            <p>
+                Perform a bitwise AND operation between the IP address and the subnet mask to obtain the network IP. The bitwise AND operation preserves the network portion of the IP address while setting the host bits to zero.            </p>
+            <p>
+                IP Address: 191.46.60.186 (11000011.00101110.00111100.10111010)<br>
+                Subnet Mask: 255.255.255.248 (11111111.11111111.11111111.11111000)<br>
+                Network IP: 191.46.60.184 (11000011.00101110.00111100.10111000)
+            </p>
+            <h3 class="step">Step 3: Calculate the Broadcast IP:</h3>
+            <p>
+                To calculate the broadcast IP, set all the host bits to 1 in the network IP.<br>
+                Network IP: 191.46.60.184 (11000011.00101110.00111100.10111000)<br>
+                Broadcast IP: 191.46.60.191 (11000011.00101110.00111100.10111111)<br>            
+            </p>
+
+            <h3 class="step">Step 4: Calculate the Total Number of Hosts:</h3>
+            <p>
+                Count the number of available host addresses within the network, excluding the network and broadcast addresses. Since the subnet mask /29 leaves 3 bits for host addresses, the total number of hosts is 2^3 - 2 = 6.
+            </p>
+        </div>
+
+        <script type="text/javascript">
+            t1 = {{ listOfDictionaries|tojson }}
+        </script>
+        <script src="/static/jscripts/bitwise.js"></script>
+    </body>
+</html>

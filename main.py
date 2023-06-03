@@ -51,5 +51,20 @@ def calssguess():
     x = generate_random_ip_address(ipclasses)    
     return(render_template('classguess.html', iplist=x, iclasses=ipclasses, dClassName=divClassName))
 
+@app.route("/bitwise.html")
+def bitwise():
+    ##----------------------------------------------------##    
+    listofdic = []
+    divClassNames = []
+    for i in range(1,11):
+        divClassNames.append(str(i))
+    ####################################################
+    for i in range(10):
+        yy = calculate_network_info()
+        listofdic.append(yy)
+    return render_template('bitwise.html', listOfDictionaries=listofdic, clist=divClassNames)
+
+
+
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000)
