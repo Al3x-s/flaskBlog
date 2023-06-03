@@ -28,7 +28,7 @@
                   <th scope="row">{{iplist.index(i)+1}}</th>
                   <td>{{i}}</td>
                   <td><input type="text" id="{{dClassName[iplist.index(i)]}}" placeholder="A B C or D"></td>
-                  <td><a href="#" type="submit" onclick="checkAnswer(this, {{iplist.index(i)}}, document.getElementById('{{dClassName[iplist.index(i)]}}').value)" >Check Answer</a></td>
+                  <td><a href="#" type="submit" onclick="checkAnswer(this, {{iplist.index(i)}}, document.getElementById('{{dClassName[iplist.index(i)]}}').value)" >Check</a></td>
                 </tr>
                 {% endfor %}
             </tbody>

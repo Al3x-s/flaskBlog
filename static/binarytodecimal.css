@@ -10,6 +10,7 @@ body{
     background-color: #212529;
     color:#7fffd4;
     margin-top: 6vh;
+    height: 150vh;
 }
 table{
     color: #7fffd4;
@@ -49,6 +50,9 @@ table{
     margin-top: 10%;
     display:flex;
     justify-content: space-evenly;
+}
+.remove{
+    text-decoration: none;
 }
 @media screen and (max-width: 580px) {
     input{
