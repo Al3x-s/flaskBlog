@@ -39,7 +39,7 @@
 
                   <td><input type="text" id="hostGuess{{listOfDictionaries.index(i)+1}}" placeholder="TotalHosts"></td>
                   <!-- add the logic on the onclick relative to the scope -->
-                  <td class="button"><a  type="submit" onclick="checkAnswer(this, {{listOfDictionaries.index(i)}}, document.getElementById('subnetGuess{{listOfDictionaries.index(i)+1}}').value, document.getElementById('networkGuess{{listOfDictionaries.index(i)+1}}').value, document.getElementById('broadcastGuess{{listOfDictionaries.index(i)+1}}').value, document.getElementById('hostGuess{{listOfDictionaries.index(i)+1}}').value )" >Check Answer</a></td>
+                  <td class="button"><a  type="submit" onclick="checkAnswer(this, {{listOfDictionaries.index(i)}}, document.getElementById('subnetGuess{{listOfDictionaries.index(i)+1}}').value, document.getElementById('networkGuess{{listOfDictionaries.index(i)+1}}').value, document.getElementById('broadcastGuess{{listOfDictionaries.index(i)+1}}').value, document.getElementById('hostGuess{{listOfDictionaries.index(i)+1}}').value )" >Check </a></td>
                 </tr>
                 {% endfor %}
             </tbody>

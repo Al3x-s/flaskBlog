@@ -20,3 +20,17 @@ function checkAnswer(current, num, usg,ung,ubs,uhg){
         document.querySelector("." + parentClass).style.backgroundColor = "#de5246"
     }
 }
+
+fetch('https://steamcommunity.com/market/pricehistory/?appid=730&market_hash_name=MP9%20%7C%20Rose%20Iron%20(Minimal%20Wear)')
+  .then(response => response.json())
+  .then(data => {
+    if (data && data.length > 0) {
+      const firstItem = data[0];
+      console.log(firstItem);
+    } else {
+      console.log('No JSON data received.');
+    }
+  })
+  .catch(error => {
+    console.log('Error occurred:', error);
+  });

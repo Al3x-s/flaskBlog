@@ -106,3 +106,14 @@ table{
     }
 
   }
+  @media (min-width: 580px) and (max-width: 1600px) {
+    input{
+        width: 80%;
+        margin-left: 5px;
+    }
+    tr{
+        height: 12vh;
+    }
+    
+
+  }
