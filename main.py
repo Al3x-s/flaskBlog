@@ -1,11 +1,20 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, session
+from flask import g
+import random
 from functions import *
+from questions import *
 
 
 
 ##----------------------------------------------------##
 
 app = Flask(__name__)
+app.secret_key = "victoriasSecret"
+
+@app.before_request
+def before_request():
+    session.modified = True
+
 
 @app.route("/")
 def hello_world():
@@ -64,7 +73,28 @@ def bitwise():
         listofdic.append(yy)
     return render_template('bitwise.html', listOfDictionaries=listofdic, clist=divClassNames)
 
-
+@app.route("/osipractice.html", methods=["GET", "POST"])
+def osi():
+    score = session.get("score", 0)
+    question_number = random.randint(1,50)
+    question = osiQuestions.get(question_number)
+    lastq = session.get("lastq", False)
+    
+    if request.method == 'POST':
+        user_answer = request.form.get('answer')
+        # Check if the user's answer is correct
+        if user_answer == question['answer']:
+            # Move to the next question
+            question = osiQuestions.get(question_number)
+            score += 1
+            lastq = True
+        if user_answer != question['answer']:
+            question = osiQuestions.get(question_number)
+    session["score"] = score
+    session["lastq"] = lastq
+    
+            
+    return(render_template('osipractice.html', osiQuestions=osiQuestions, question=question, nor=score, qn=question_number, lastq=lastq))
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000)

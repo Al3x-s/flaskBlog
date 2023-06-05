@@ -1,0 +1,18 @@
+.dumb {
+    width: 80%;
+    margin:auto;
+    background-color: #212529;
+    color:#7fffd4;
+    margin-top: 6vh; 
+}
+a, a:visited {
+    border: 2px solid #7fffd4;
+    color: #7fffd4;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  a:hover, a:active {
+    color: #212529;
+  }
