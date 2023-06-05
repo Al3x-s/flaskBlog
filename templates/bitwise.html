@@ -15,9 +15,11 @@
     </head>
     <body class="body">
         <h1> BitWise And Practice </h1>
-        <table class="tbl">
+
+        <table class="main_table">
             <thead>
               <tr>
+                <th scope="col">#</th>
                 <th scope="col">IP</th>
                 <th scope="col">Subnet</th>
                 <th scope="col">NetworkID</th>
@@ -43,7 +45,9 @@
                 </tr>
                 {% endfor %}
             </tbody>
+
           </table>
+          
           <div class="buttons">
           
             <a href="#" type="submit" onclick="window.location.reload()"> Restart </a>
@@ -64,7 +68,7 @@
                     <th scope="col">TotalHosts</th>
                   </tr>
                 </thead>
-  
+
                 <tr>
                   <td>191.46.60.186/29</td>
                   <td><input type="text" placeholder="255.255.255.248"></td>
@@ -76,8 +80,9 @@
                   <td><input type="text" placeholder="6"> </td>
                   <!-- add the logic on the onclick relative to the scope -->
                 </tr>
-  
             </table>
+
+
         <div class="instructions">
             <h2>Step-by-Step Calculation of Network Information</h2>
 

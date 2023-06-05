@@ -25,7 +25,6 @@
         </div>
 
         <div class="nor">{{nor}}</div>
-        {% comment %} <div>{{osiQuestions[qn]['answer']}}</div> {% endcomment %}
         <div class="buttons">
           
             <a href="#" type="submit" onclick="window.location.reload()"> Restart </a>
@@ -35,10 +34,7 @@
 
         <script type="type/javascript">
             var yourmom = {{ osiQuestions|tojson }};
-        {% comment %} </script>
-        <script type="type/javascript">
-            var rightwrong = {{ lastq }};
-        </script> {% endcomment %}
+        
         <script src="/static/jscripts/osipractice.js"></script>
     </body>
 </html>
