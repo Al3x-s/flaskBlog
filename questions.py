@@ -1,11 +1,11 @@
 osiQuestions = {
     1: {
-        "question": "Which layer of the OSI model is responsible for establishing, managing, and terminating network connections?",
+        "question": "Which layer of the OSI model is responsible for establishing, managing, and terminating network connectivity?",
         "choices": ["a) Physical", "b) Data Link", "c) Network", "d) Transport"],
         "answer": "d"
     },
     2: {
-        "question": "Which layer of the OSI model is responsible for error detection and recovery at the network level?",
+        "question": "Which layer of the OSI model is responsible for error detection and recovery of the network?",
         "choices": ["a) Session", "b) Transport", "c) Presentation", "d) Data Link"],
         "answer": "c"
     },
@@ -127,7 +127,7 @@ osiQuestions = {
     26: {
         "question": "Which layer of the OSI model is responsible for converting data into a format that can be transmitted over a network?",
         "choices": ["a) Presentation", "b) Data Link", "c) Transport", "d) Application"],
-        "answer": "a"
+        "answer": "b"
     },
     27: {
         "question": "Which layer of the OSI model defines the format and control of data packets for transmission?",
