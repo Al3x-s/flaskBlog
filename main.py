@@ -47,7 +47,7 @@ def BinToDec():
 @app.route("/classguess.html")
 def calssguess():
     ##----------------------------------------------------##    
-    classes = ['A', 'B','C','D', 'E' ]
+    classes = ['A', 'B','C', 'D', 'E']
     ipclasses = []
     divClassName = []
     ####################################################

@@ -20,11 +20,12 @@
                     <input type="radio" name="answer" onchange="logChoice()" value="{{ choice[0] }}"> {{ choice }}
                     <br>
                 {% endfor %}
-                <button onclick="run({{lastq}})"> run </button>
+                <button onclick="run({{lastq}})" class="checker"> Enter </button>
             </form>
         </div>
 
         <div class="nor">{{nor}}</div>
+        
         <div class="buttons">
           
             <a href="#" type="submit" onclick="window.location.reload()"> Restart </a>
