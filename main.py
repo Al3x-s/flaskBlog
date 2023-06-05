@@ -88,6 +88,7 @@ def bitwise():
 @app.route("/osipractice.html", methods=["GET", "POST"])
 def osi():
     score = session.get("score", 0)
+    session["score"] = 0
     question_number = random.randint(1,50)
     question = osiQuestions.get(question_number)
     lastq = session.get("lastq", False)
@@ -100,8 +101,15 @@ def osi():
             question = osiQuestions.get(question_number)
             score += 1
             lastq = True
+            print("yeeeees")
         if user_answer != question['answer']:
             question = osiQuestions.get(question_number)
+            print("nooooooooooooooo")
+            lastq = False
+    if lastq:
+        lastq = 'Correct'
+    if not lastq:
+        lastq=''
     session["score"] = score
     session["lastq"] = lastq
     

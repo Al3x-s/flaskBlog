@@ -13,5 +13,5 @@ function logChoice() {
   }
 
 function run(br){
-    console.log("br")
+    console.log(br)
 }
