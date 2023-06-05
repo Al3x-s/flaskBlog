@@ -9,11 +9,12 @@ from questions import *
 ##----------------------------------------------------##
 
 app = Flask(__name__)
-app.secret_key = "victoriasSecret"
+key = str(random.randint(-7,999999))
+app.secret_key = key
 
 @app.before_request
 def before_request():
-    session.modified = True
+    session.modified = False
 
 
 @app.route("/")
