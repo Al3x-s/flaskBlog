@@ -14,7 +14,7 @@
     <body class="dumb">
         <div class="cardPostTest">
             <form method="POST">
-                <h1>Question :{{qn}}</h1>
+                <h1>Question</h1>
                 <h3>{{ question.question }}</h3>
                 {% for choice in question.choices %}
                     <input type="radio" name="answer" onchange="logChoice()" value="{{ choice[0] }}"> {{ choice }}

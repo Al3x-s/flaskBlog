@@ -43,6 +43,18 @@ def BinToDec():
     return render_template('binarytodecimal.html', blist=BinaryList, alist=binaryCorrectAnswers, clist=classlist)
 
 
+@app.route("/decimaltobinary.html")
+def dectobin():
+    binlist = []
+    aList=[]
+    for i in range(10):
+        binlist.append(createRandomDecimal())
+    print(binlist)
+    for i in binlist:
+        aList.append(fixBinary(DecimalToBinary(i)))
+    
+    return(render_template("decimaltobinary.html", alist=aList, binlist=binlist))
+
 
 @app.route("/classguess.html")
 def calssguess():

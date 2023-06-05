@@ -9,7 +9,34 @@ def createRandomBinary():
     #return String
     #DONE
 ####################################################
+def createRandomDecimal():
+        random_decimal = random.randint(0,255)
+        return random_decimal
+####################################################
+def DecimalToBinary(num):
+    binary = ''
+    if num >= 1:
+        binary = DecimalToBinary(num // 2)
+    binary+=str(num%2)
+    return binary
+####################################################
+#FIGURE THIS SHIT OUT WHATS THE DIFFERENCE
+####################################################
+def translateDecimal(decimal):
+        translated_decimal = ''
+        if decimal >= 1:
+            translated_decimal = translated_decimal(decimal // 2)
+        translated_decimal+=str(decimal%2)
+        return translated_decimal
+        #fix variable names
+        #returns String
+        #DONE
+####################################################
+#sdaskdhfgasiudfgasidfugas
+####################################################
 def fixBinary(given_num):
+    if len(given_num) == 8:
+        return(given_num) 
     if len(given_num) < 8: 
         difference = 8 - len(given_num)
         for i in range(difference):

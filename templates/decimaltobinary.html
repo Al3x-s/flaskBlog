@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="format-detection" content="telephone=no" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="/static/decimaltobinary.css">
+    </head>
+    <body>
+          <h1>Binary To Decimal</h1>
+          <h2>InDev</h2>
+        
+        
+        <table class="tbl">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">number</th>
+                <th scope="col">Guess</th>
+                <th scope="col">Check</th>
+              </tr>
+            </thead>
+
+            <tbody>
+                {% for i in binlist %}
+                <tr class="row{{binlist.index(i)+ 1}}">
+                  <th scope="row">{{binlist.index(i)+1}}</th>
+                  <td class="remove">{{i}}</td>
+                  <td><input type="text" id="{{alist[binlist.index(i)]}}" ></td>
+                  <td><a href="#" type="submit" onclick="checkAnswer(this, {{binlist.index(i)}}, document.getElementById('{{alist[binlist.index(i)]}}').value)" class="check" >Check</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+
+          <div class="buttons">
+          
+            <a href="#" type="submit" onclick="window.location.reload()"> Restart </a>
+            <a href="/index.html" type="submit"> Go Back </a>
+          
+          </div>
+
+        
+          <script type="text/javascript"> 
+            var test3 = {{ alist|tojson }} ;
+        </script>
+          <script src="/static/jscripts/decimaltobinary.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+        
+    </body>
+</html>

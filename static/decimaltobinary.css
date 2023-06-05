@@ -1,0 +1,84 @@
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+body{
+    width: 80%;
+    margin:auto;
+    background-color: #212529;
+    color:#7fffd4;
+    margin-top: 6vh;
+    height: 150vh;
+}
+table{
+    color: #7fffd4;
+    width: inherit;
+    margin: auto;
+}
+.headerCont{
+    display: flex;
+}
+a:link, a:visited {
+  border: 2px solid #7fffd4;
+  color: #7fffd4;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: c;
+  color: #212529;
+}
+input { 
+    border-style: none;
+    background: transparent;
+    outline: none; 
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-position: 0% 0%;
+    border-bottom: solid #7fffd4;
+    color: #7fffd4;
+}
+table{
+    margin-top: 4vh;
+}
+.buttons{
+    margin-top: 10%;
+    display:flex;
+    justify-content: space-evenly;
+}
+.remove{
+    text-decoration: none;
+}
+@media screen and (max-width: 580px) {
+    input{
+        width: 90%;
+        margin-left: 5px;
+    }
+    .check{
+        font-size: 1.5vh;
+    }
+    a:link, a:visited {
+        border: 2px solid #7fffd4;
+        color: #7fffd4;
+        padding: 3px 8px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+      }
+      
+      a:hover, a:active {
+        color: #212529;
+      }
+      body{
+        width: 95%;
+      }
+      table {
+        border-collapse: separate;
+        border-spacing: 20px;
+      }
+  }
