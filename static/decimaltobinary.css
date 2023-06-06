@@ -12,11 +12,6 @@ body{
     margin-top: 6vh;
     height: 150vh;
 }
-table{
-    color: #7fffd4;
-    width: inherit;
-    margin: auto;
-}
 .headerCont{
     display: flex;
 }
@@ -43,9 +38,6 @@ input {
     border-bottom: solid #7fffd4;
     color: #7fffd4;
 }
-table{
-    margin-top: 4vh;
-}
 .buttons{
     margin-top: 10%;
     display:flex;
@@ -54,6 +46,15 @@ table{
 .remove{
     text-decoration: none;
 }
+.row{
+    display: flex;
+}
+
+
+
+
+
+
 @media screen and (max-width: 580px) {
     input{
         width: 90%;
