@@ -25,6 +25,7 @@
                 {% endfor %}
                 <button onclick="run({{lastq}})" class="checker"> Run </button>
             </form>
+            <button onclick="runny()" class="checker">check </button>
         </div>
 
         <div class="lastq">{{lastq}}</div>
@@ -36,10 +37,10 @@
           
           </div>
 
-        <script type="type/javascript">
-            var yourmom = {{ osiQuestions|tojson }};
+        <script type="text/javascript">
+            var yourmother = {{ osiQuestions|tojson }};
         </script>
 
-        <script src="/static/jscripts/osipractice.js"> </script>
+        <script src="/static/jscripts/osipractice.js"></script>
     </body>
 </html>
