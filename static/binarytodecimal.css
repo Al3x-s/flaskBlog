@@ -67,5 +67,21 @@ input {
 }
 
 @media (min-width: 375px) and (max-width: 580px) {
-   
+    input{
+    width: 60px;
+    }
+    .row{
+    display: flex;
+    justify-content: space-around;
+    }   
+    .check{
+        padding: 5px 10px;
+    }
+    
+.i{
+    padding: 0px;
+}
+.buttons a{
+    padding: 10px 20px;
+}
   }

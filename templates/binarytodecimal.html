@@ -13,31 +13,25 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"rel="stylesheet"/>
     </head>
     <body>
-          <h1>Binary To Decimal</h1>
-          <h2>InDev</h2>
-        
-        
+        <h1>Binary To Decimal</h1>
+        <h2>InDev</h2>
+    
         <div class="column_container">
 
-
                 {% for i in blist %}
+
                 <div class="row{{blist.index(i)+ 1}} row">
-
                   <p class="i">{{blist.index(i) + 1 }}</p>
-
                   <p class="remove i">{{i}}</p>
-                  <p class="i"><input type="text" id="{{clist[blist.index(i)]}}"></p>
-
+                  <p class="i"><input type="number" id="{{clist[blist.index(i)]}}"></p>
                   <p>
                     <a href="#" type="submit" onclick="checkAnswer(this, {{blist.index(i)}}, document.getElementById('{{clist[blist.index(i)]}}').value)" class="check" >Check</a>
                   </p>
-                  {% comment %} make a button that check to see of the choice is === the answer then have another button that switches the question {% endcomment %}
                 </div>
+
                 {% endfor %}
             
           </div>
-
-
           <div class="buttons">
           
             <a href="#" type="submit" onclick="window.location.reload()"> Restart </a>

@@ -14,10 +14,12 @@ function checkAnswer(current, num, usg,ung,ubs,uhg){
     if(userSubnetGuess == correctSubnetAnswer && userNetworkGuess == correctNetworkAnswer && userBroadcastGuess == correctBroadcastAnswer && userHostGuess == correctHostAnswer){
         console.log("yes")
         document.querySelector("." + parentClass).style.backgroundColor = "#0F9D58"
-    }
+        document.querySelector("." + parentClass).style.borderRadius = "15px"
+      }
     else if(userSubnetGuess != correctSubnetAnswer && userNetworkGuess != correctNetworkAnswer && userBroadcastGuess != correctBroadcastAnswer && userHostGuess != correctHostAnswer){
         console.log("wrong")
         document.querySelector("." + parentClass).style.backgroundColor = "#de5246"
+        document.querySelector("." + parentClass).style.borderRadius = "15px"
     }
 }
 
