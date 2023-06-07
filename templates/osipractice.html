@@ -19,13 +19,14 @@
               
                 {% for choice in question.choices %}
                     <div class="radios">
-                    <input type="radio" name="answer" onchange="logChoice()" value="{{question['answer']}}"> {{ choice }}
+                    <input type="radio" name="answer" onchange="logChoice(this)" value="{{question['answer']}}" class="{{choice}}"> {{ choice }}
                     <br>
                     </div>
                 {% endfor %}
                 <button onclick="run({{lastq}})" class="checker"> Run </button>
             </form>
             <button onclick="runny()" class="checker">check </button>
+            <h2 id="isRight"> </h2>
         </div>
 
         <div class="lastq">{{lastq}}</div>
@@ -39,6 +40,7 @@
 
         <script type="text/javascript">
             var yourmother = {{ osiQuestions|tojson }};
+            var bb = {{qn}};
         </script>
 
         <script src="/static/jscripts/osipractice.js"></script>
