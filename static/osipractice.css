@@ -36,14 +36,15 @@ input[type="radio"]:checked {
   color: #7fffd4;
   border: 2px solid #7fffd4; /* Green */
   padding: 10px 20px;
-
 }
-
+#isRight{
+  margin-top: 2.5vh;
+}
 .buttons{
   margin-top: 5vh;
 }
 .checker{
-  margin-top: 5vh;
+  margin-top: 2.5vh;
 }
 .qheader{
   margin-bottom: 4vh;
@@ -51,7 +52,6 @@ input[type="radio"]:checked {
 .radios{
   margin-bottom: 2vh;
 }
-
 .lastq{
   margin-top: 2vh;
 }
