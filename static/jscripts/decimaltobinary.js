@@ -3,7 +3,7 @@ function checkAnswer(current, num, classname){
     var parentClass = current.parentNode.parentNode.className;
     var correctAnswer =  test3[num];
     var userguess = classname;
-    console.log(userguess)
+    parentClass = parentClass.substring(0,5);
     if(correctAnswer == userguess){
         document.querySelector("." + parentClass).style.backgroundColor = "#0F9D58"
      

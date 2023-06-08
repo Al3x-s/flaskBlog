@@ -1,3 +1,7 @@
+*{
+    font-family: "Inter", sans-serif;
+}
+
 h1{
     text-align: center;
 }
@@ -12,27 +16,20 @@ body{
     margin-top: 6vh;
     height: 150vh;
 }
-table{
-    color: #7fffd4;
-    width: inherit;
-    margin: auto;
-}
-.headerCont{
-    display: flex;
-}
 a:link, a:visited {
-  border: 2px solid #7fffd4;
-  color: #7fffd4;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-
-a:hover, a:active {
-  background-color: c;
-  color: #212529;
-}
+    background-color: #7fffd4;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 10px;
+  }
+  
+  a:hover, a:active {
+    background-color: c;
+    color: #212529;
+  }
+  
 input { 
     border-style: none;
     background: transparent;
@@ -43,42 +40,53 @@ input {
     border-bottom: solid #7fffd4;
     color: #7fffd4;
 }
-table{
-    margin-top: 4vh;
-}
 .buttons{
     margin-top: 10%;
     display:flex;
     justify-content: space-evenly;
 }
-.remove{
-    text-decoration: none;
+
+.row{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    border-radius: 10px;
 }
-@media screen and (max-width: 580px) {
-    input{
-        width: 90%;
-        margin-left: 5px;
-    }
-    .check{
-        font-size: 1.5vh;
-    }
-    a:link, a:visited {
-        border: 2px solid #7fffd4;
-        color: #7fffd4;
-        padding: 3px 8px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-      }
-      
-      a:hover, a:active {
-        color: #212529;
-      }
-      body{
-        width: 95%;
-      }
-      table {
-        border-collapse: separate;
-        border-spacing: 20px;
-      }
+.buttons a{
+    padding: 10px 20px;
+}
+.check{
+    padding: 10px 20px;
+}
+
+.column_container{
+    display: flex;
+    flex-direction: column;
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+@media (min-width: 375px) and (max-width: 580px) {
+input{
+    width: 80px;
+}
+.row{
+display: flex;
+justify-content: space-around;
+}
+.buttons a{
+    padding: 10px 20px;
+}
+.check{
+    padding: 5px 10px;
+}
   }
+
+
+
+/* @media screen and (max-width: 580px) {
+    
+  } */
