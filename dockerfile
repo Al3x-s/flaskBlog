@@ -1,7 +1,6 @@
 FROM --platform=linux/amd64 faucet/python3
-WORKDIR /app
+WORKDIR /application
 COPY requirements.txt .
-COPY app .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 EXPOSE 5000
